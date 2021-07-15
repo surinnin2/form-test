@@ -1,0 +1,12 @@
+{%- macro render_phone_number_form(subform, index) %}
+    <div id="phone-{{ index }}-form" class="{% if index != '_' %}subform{% else %}is-hidden{% endif %}" data-index="{{ index }}">
+        <div>
+            {{ subform.number.label }}
+            {{ subform.number }}
+        </div>
+        
+
+        <a class="remove" href="#">Remove</a>
+        <hr/>
+    </div>
+{%- endmacro %}
